@@ -69,10 +69,39 @@ aside { /*Боковая часть*/
     align-items: center;
 }
 
+.container {
+    display: grid;
+}
+
 .f1, .f2, .f3, .f4  { /*Секция футера 1-2-3-4*/
 background-color: #fafafa;
 height: 10vh;
 display: flex;
 align-items: center;
 justify-content: center;
+}
+
+@media screen and (min-width: 400px) and (max-width: 599px) {
+    .footer {
+        display: none;
+    }
+
+    .main { 
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .footer {
+        display: none;
+    }
+    
+   .main {display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh 25vh;
+   }
+
+   .header {
+    height: 25vh;
+   }
 }
